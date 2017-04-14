@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Intro to Git</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -20,12 +20,213 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<style>
+			.monospacetext {
+				font-size: 0.8em !important;
+			}
+			.image {
+				width: 400px !important;
+			}
+			.viacomlogo {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+					<script type="text/template">
+						![Viacom](/Users/goetzemi/Downloads/viacomlogo.svg) <!-- .element: class="viacomlogo"-->
+
+						# Git Crash Course
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## 1. Set Up Git & Authenticate
+
+					[https://help.github.com/articles/set-up-git/](https://help.github.com/articles/set-up-git/)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## 2. Create a Repository
+
+					[![New Repository](/Users/goetzemi/Desktop/newrepo.png)](https://github.com/new)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## 3. Clone Your New Repo
+
+					`git clone git@github.com:USERNAME/MYREPO.git` <!-- .element: class="monospacetext"-->
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					[![Trees](http://rogerdudler.github.io/git-guide/img/trees.png)](http://rogerdudler.github.io/git-guide/)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## Check Your Directory Status
+
+					`git status`
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## Inspect Your Changes
+
+					`git diff`
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					### Staging files to be committed:
+
+					`git add .`
+
+					or
+
+					`git add FILENAME`
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					### Committing your work:
+
+					`git commit -m 'Commit message here'`
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## I need to work on something else!
+
+					_Stash Changes to Use Later:_
+
+					`git stash`
+
+					_And Continue Working on Them:_
+
+					`git stash apply`
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## Help! I made a mistake!
+
+					_Undo Unstaged Changes:_
+
+					`git checkout .`
+
+					_Undo Staged Changes:_
+
+					`git reset`
+
+					_Undo A Commit:_
+
+					`git reset HEAD~`
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					### Pushing your changes:
+
+					`git push`
+
+					![Take Bikini Bottom...](/Users/goetzemi/Desktop/takebikinibottom.png) <!-- .element: class="image"-->
+					![and push it somewhere else](/Users/goetzemi/Desktop/pushitsomewhereelse.png) <!-- .element: class="image"-->
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					### Pulling other people's changes:
+
+					`git pull`
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					![Reefblower](/Users/goetzemi/Downloads/reefblower.gif)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## Feature Branch Workflow
+
+					![Feature Branch Workflow](/Users/goetzemi/Desktop/branching.png)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## Create A New Branch
+
+					`git checkout -b BRANCHNAME`
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## Add, Commit, Push Changes
+
+					`git add .` <!-- .element: class="monospacetext"-->
+
+					`git commit -m 'commit message'` <!-- .element: class="monospacetext"-->
+
+					`git push` <!-- .element: class="monospacetext"-->
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## Remember!
+
+					`'git status'` is your friend! Use it to make sure you are never accidentally pushing to the wrong branch.
+
+					[LIFEHACK: Add branch names to your terminal prompt!](https://mfitzp.io/article/add-git-branch-name-to-terminal-prompt-mac/)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## Checkout Another Branch
+
+					`git checkout BRANCHNAME`
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## Pull Requests
+
+					![Pull Requests](/Users/goetzemi/Downloads/imagination.jpg)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					![Thank you!](/Users/goetzemi/Downloads/thankyou.gif)
+					</script>
+				</section>
 			</div>
 		</div>
 
